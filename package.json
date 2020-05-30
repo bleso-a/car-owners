@@ -4,7 +4,10 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "seed": "node seed.js"
+    "seed": "node seed.js",
+    "start": "node server.js",
+    "heroku-postbuild": "cd frontend && npm install && npm run build"
+
   },
   "keywords": [],
   "author": "",
