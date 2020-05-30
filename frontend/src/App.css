@@ -1,38 +1,126 @@
 .App {
   text-align: center;
+  padding: 1.5rem;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.filters, .filters ul, .car-owners-list {
+  list-style: none;
+  padding: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.filters {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.filters-item {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 1.5rem 1rem;
+  cursor: pointer;
+}
+
+.filters-item  h3 {
+  margin-top: 0;
+}
+
+.filters-item ul{
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.filters-item-countries {
+  margin-bottom: 1rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.filters-item-countries li{
+  background-color: #ddd;
+  padding: .5rem;
+  border-radius: 20px;
+}
+
+/* .filters-item:not(:last-of-type) {
+  margin-bottom: 1rem;
+} */
+
+.filters-item-countries li:not(:last-of-type),
+.filters-item-colors li:not(:last-of-type) {
+  margin-right: 1rem;
+}
+
+.filters-item-colors li {
+  height: 25px;
+  width: 25px;
+  border-radius: 100%;
+}
+
+.car-owners-list-item {
+  display: flex;
+  background-color: #fff;
+  padding: 1.5rem 1rem;
+  border-radius: 10px;
+}
+
+.car-owners-list-item:not(:last-of-type){
+  margin-bottom: 1rem;
+}
+
+.car-owners-list-item-info {
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.car-owners-list-item-info:first-of-type div {
+  padding-right: 1rem;
+}
+
+.car-owners-list-item-info:first-of-type div:not(:first-of-type) {
+  padding-left: 1rem;
+}
+
+.car-owners-list-item-info:first-of-type div:not(:last-of-type){
+  border-right: 1px solid #000;
+}
+
+.car-owners-list-item-info:last-of-type div:not(:last-of-type) {
+  margin-right: 1rem;
+}
+
+.car-owners-list-item-right {
+  text-align: left;
+  margin-left: 2rem;
+}
+
+.car-owners-list-item-right p {
+  margin: 0;
+}
+
+.car-owners-list-item-right h3 {
+  margin: 0;
+  margin-bottom: 1rem;
+}
+
+.car-owners-list-item-info-label {
+  color: grey;
+}
+
+.car-owners-list-item-info-value span {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  border-radius: 100%;
+}
+
+.car-owners-list-item-info-email {
+  margin-bottom: 1rem !important;
+}
+
+.car-owners-list-item-info-email,
+.car-owners-list-item-info-bio {
+  color: grey;
+}
+.car-owners-list-item-info-email span, 
+.car-owners-list-item-info-bio span {
+  color: #000;
 }

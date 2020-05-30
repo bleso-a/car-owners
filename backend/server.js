@@ -23,11 +23,7 @@ connection.once('open', () => {
   console.log("MongoDB database connection established successfully");
 })
 
-
-
-
 app.use('/car_owners', car_ownersRouter);
-
 
 // Start the server
 app.listen(port, () => {
