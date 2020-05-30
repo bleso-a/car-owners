@@ -2,6 +2,7 @@
 const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose'); // Connect to mongodb
+const path = require('path');
 require('dotenv').config();
 
 const car_ownersRouter = require('./routes/car_owners');
@@ -24,6 +25,12 @@ connection.once('open', () => {
 })
 
 app.use('/car_owners', car_ownersRouter);
+
+app.use(express.static(path.resolve(__dirname, '../frontend/build')));
+
+app.get('/*', (req, res) => {
+  res.sendFile(path.resolve(__dirname, '../frontend/build', 'index.html'));
+});
 
 // Start the server
 app.listen(port, () => {

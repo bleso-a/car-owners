@@ -8,7 +8,7 @@ function App() {
   const [carOwners, setCarOwners] = React.useState([])
   React.useEffect(() => {
     (async () => {
-      const res = await fetch('http://localhost:5000/car_owners/filters')
+      const res = await fetch('/car_owners/filters')
       const filters = await res.json();
       setFilters(filters)
       console.log({ filters })
@@ -27,7 +27,7 @@ function App() {
     })
     // const query = `?colors=${colors.join(',')}&countries=${countries.join(',')}&start_year=${start_year}&end_year=${end_year}&gender=${gender.charAt(0).toUpperCase() + gender.slice(1)}`
     // console.log({ query })
-    const res = await fetch(`http://localhost:5000/car_owners?${query}`)
+    const res = await fetch(`/car_owners?${query}`)
     const carOwners = await res.json();
     
     console.log({ carOwners })
