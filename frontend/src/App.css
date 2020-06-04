@@ -9,9 +9,23 @@
 }
 
 .filters {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.page-title i{
+  margin-right: .5rem;
+}
+
+.page-title a{
+  text-decoration: none;
+  color: #343a40;
+}
+
+.page-title {
+  color: #343a40;
+  text-align: left;
 }
 
 .filters-item {
@@ -19,25 +33,45 @@
   border-radius: 10px;
   padding: 1.5rem 1rem;
   cursor: pointer;
+  width: 100%;
+  max-width: 450px;
+  margin-bottom: 1rem;
 }
 
+.filters-item a{
+  text-decoration: none;
+}
 .filters-item  h3 {
   margin-top: 0;
+  color: #343a40;
+}
+.filters-item p{
+  color: #343a40;
+  text-transform: capitalize;
 }
 
 .filters-item ul{
   display: flex;
   justify-content: center;
+  
 }
 
 .filters-item-countries {
   margin-bottom: 1rem;
+  flex-wrap: wrap;
+  max-width: 350px;
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 1rem;
 }
 
 .filters-item-countries li{
-  background-color: #ddd;
+  background-color: #f8f9fa;
   padding: .5rem;
   border-radius: 20px;
+  margin-bottom: .5rem;
+  color: #6c757d;
+  font-weight: bold;
 }
 
 /* .filters-item:not(:last-of-type) {
